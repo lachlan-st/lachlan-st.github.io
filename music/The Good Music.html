@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <title>The good music</title>
+
+<body>
+    <p>
+       The Middle,
+       Jimmey Eat World
+    </p>
+    <audio id="first" controls="">
+        <source src="The_Middle.mp3" type="audio/mp3">
+        <source src="The_Middle.ogg" type="audio/mp3">
+    </audio>
+    <p>
+        When I Come Around,
+        Green Day 
+    </p>
+    
+    <audio id="second" controls="">
+        <source src="When_I_Come_Around.mp3" type="audio/mp3">
+        <source src="When_I_Come_Around.ogg" type="audio/mp3">
+
+    </audio>
+    <p>
+         Good Riddence (Time of Youre Life),
+         Green Day
+    </p>
+   
+    <audio id="Third" controls="">
+        <source src="Good_Riddence_(Time_Of_Youre_Life).mp3" type="audio/mp3">
+        <source src="Good_Riddence__Time_Of_Youre_Life_.ogg" type="audio/mp3">
+                
+    </audio>
+    <p>
+        Mmm Mmm Mmm Mmm,
+       Crash Test Dummies
+    </p>
+    <audio id="Forth" controls="">
+        <source src="Mmm_Mmm_Mmm_Mmm.mp3" type="audio/mp3">
+        <source src="Mmm_Mmm_Mmm_Mmm.ogg" type="audio/mp3">
+                
+    </audio>
+</body>
+<script>
+
+
+
+    document.querySelector('#first').addEventListener('ended',
+        // Function. This is the same as if you
+        // wrote `playSecond`
+        e => {
+            document.querySelector("#second").play();
+        }
+    );
+    document.querySelector('#second').addEventListener('ended',
+    e=> {
+        document.querySelector("#Third").play();
+    }
+    )
+    document.querySelector('#Third').addEventListener('ended',
+    e=> {
+            document.querySelector('#Forth').play();
+    }
+    )
+</script>    
+</html>
